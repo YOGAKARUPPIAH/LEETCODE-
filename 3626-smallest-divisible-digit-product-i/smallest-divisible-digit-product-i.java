@@ -1,8 +1,6 @@
 class Solution {
     public int smallestNumber(int n, int t) {
-
         while (true) {
-
             int num = n;
             int pro = 1;
             while (num > 0) {
@@ -14,7 +12,4 @@ class Solution {
                 return n;
             } else {
                 n++;
-            }
-        }
-    }
-}
+            }}}}
