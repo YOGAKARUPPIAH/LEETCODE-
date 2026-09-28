@@ -10,8 +10,6 @@ class Solution {
                 i++;
             } else {
                 j++;
-            }
-        }
+            }}
         return -1;
-    }
-}
+    }}
