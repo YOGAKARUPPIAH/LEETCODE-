@@ -3,7 +3,6 @@ class Solution {
         int n = s.length() - 1;
         int left = 0;
         int right = 0;
-
         for (int i = 0; i <= n; i++) {
             int val = s.charAt(i) - 48;
             if (i <= n - 1)
@@ -11,10 +10,8 @@ class Solution {
             if (i >= 1)
                 right = (right + getMod10(n - 1, i - 1) * val) % 10;
         }
-
         return left == right;
     }
-    
     private int getMod10(int n, int i) {
         int[][] fast5 = {
             {1,0,0,0,0},
@@ -29,7 +26,6 @@ class Solution {
         };
         int mod2 = 1;
         int mod5 = 1;
-
         int a = n, b = i;
         while (a > 0 || b > 0) {
             int na = a & 1;
@@ -41,7 +37,6 @@ class Solution {
             a >>= 1;
             b >>= 1;
         }
-
         a = n;
         b = i;
         while (a > 0 || b > 0) {
@@ -51,7 +46,6 @@ class Solution {
             a /= 5;
             b /= 5;
         }
-
         return xunzhi[mod2][mod5];
     }
 }
